@@ -288,13 +288,13 @@ img {
 }
 
 .home__blob {
-  width: 200px;
+  width: 350px;
   fill: var(--first-color);
   /* fill: hsl(69, 69%, 61%); */
 }
 .home__blob-img {
-  width: 180%;
-  height: 145%;
+  width: 135%;
+  height: 160%;
   padding-left: 30px;
 }
 .home__data {
