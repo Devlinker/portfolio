@@ -23,26 +23,6 @@ function linkAction() {
 }
 navLink.forEach((n) => n.addEventListener("click", linkAction));
 
-/*======================= ACCORD SKILLS ======================*/
-
-const skillsContent = document.getElementsByClassName("skills__content"),
-  skillsHeader = document.querySelectorAll(".skills__header");
-
-function toggleSkills() {
-  let itemClass = this.parentNode.className;
-
-  for (i = 0; i < skillsContent.length; i++) {
-    skillsContent[i].className = "skills__content skills__close";
-  }
-  if (itemClass === "skills__content skills__close") {
-    this.parentNode.className = "skills__content skills__open";
-  }
-}
-
-skillsHeader.forEach((el) => {
-  el.addEventListener("click", toggleSkills);
-});
-
 /*============== Qualification Skills ===============*/
 
 /*const tabs = document.querySelectorAll('[data-target]'),
@@ -177,3 +157,43 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
+
+/*==================== CUSTOM CURSOR ====================*/
+const cursorDot = document.querySelector(".custom-cursor-dot");
+const cursorOutline = document.querySelector(".custom-cursor-outline");
+
+if (cursorDot && cursorOutline) {
+  window.addEventListener("mousemove", (e) => {
+    const posX = e.clientX;
+    const posY = e.clientY;
+
+    // Use translate3d for hardware acceleration
+    cursorDot.style.transform = `translate3d(${posX}px, ${posY}px, 0) translate(-50%, -50%)`;
+    cursorOutline.style.transform = `translate3d(${posX}px, ${posY}px, 0) translate(-50%, -50%)`;
+  });
+
+  // Track hover state for all interactive elements to trigger hover scaling
+  const selectInteractiveElements = () => {
+    const hoverElements = document.querySelectorAll(
+      "a, button, input, textarea, select, .skills__header, .change-theme, .portfolio__scroll"
+    );
+    hoverElements.forEach((el) => {
+      // Prevent adding duplicate listeners
+      if (!el.dataset.cursorTracked) {
+        el.dataset.cursorTracked = "true";
+        el.addEventListener("mouseenter", () => {
+          document.body.classList.add("cursor-hover");
+        });
+        el.addEventListener("mouseleave", () => {
+          document.body.classList.remove("cursor-hover");
+        });
+      }
+    });
+  };
+
+  selectInteractiveElements();
+
+  // Re-run tracker when document mutation happens to catch newly created/rendered elements
+  const observer = new MutationObserver(selectInteractiveElements);
+  observer.observe(document.body, { childList: true, subtree: true });
+}

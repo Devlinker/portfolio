@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
     <link rel="stylesheet" href="assets/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="assets/newcss.css" />
+    <link rel="stylesheet" href="assets/newcss.css?v=1.5" />
     <link
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
@@ -50,7 +50,6 @@
           <i class="uil uil-times nav__close" id="nav-close"></i>
         </div>
         <div class="nav__btns">
-          <!-- Theme change button -->
           <i class="uil uil-moon change-theme" id="theme-button"></i>
 
           <div class="nav__toggle" id="nav-toggle">
@@ -65,6 +64,10 @@
       <!--========================= Home =====================-->
 
       <section class="home section" id="home">
+        <!-- Ambient Background Glow Blobs -->
+        <div class="home__glow home__glow-1"></div>
+        <div class="home__glow home__glow-2"></div>
+
         <div class="home__container container grid">
           <div class="home__content grid">
             <div class="home__social">
@@ -148,36 +151,37 @@
         <h2 class="section__title">About Me</h2>
         <span class="section__subtitle">My introduction</span>
 
-        <div class="about__container container grid">
-          <img src="assets\img\man3.jpg" alt="" class="about__img" />
-
+        <div class="about__container container">
           <div class="about__data">
-            <p class="about__description">
-              I have great knowledge  in HTML, CSS, Bootstrap, and JavaScript, self-motivated, independent and team worker, problem solver through research or else I'll get some suggestions from my senior levels or mentors and committed to company growth and as well as I can improve my skills.
-            </p>
+<p class="about__description">
+  I’m a Frontend Developer skilled in HTML, CSS, Bootstrap, and JavaScript.
+  I enjoy building clean, responsive, and user-friendly websites.
+  I’m a quick learner, self-motivated, and love solving problems through coding.
+  I’m always eager to improve my skills and create better web experiences.
+</p>
 
             <div class="about__info">
-              <div>
+              <div class="about__info-card">
+                <i class="fa-solid fa-graduation-cap about__info-icon"></i>
                 <span class="about__info-title">06.70+</span>
                 <span class="about__info-name">Aggregate <br />CGPA</span>
               </div>
 
-              <div>
-                <span class="about__info-title">03+</span>
-                <span class="about__info-name"
-                  >
-                  Projects</span
-                >
+              <div class="about__info-card">
+                <i class="fa-solid fa-folder-open about__info-icon"></i>
+                <span class="about__info-title">09+</span>
+                <span class="about__info-name">Projects</span>
               </div>
 
-              <div>
-                <span class="about__info-title">0</span>
-                <span class="about__info-name">Months <br />experience</span>
+              <div class="about__info-card">
+                <i class="fa-solid fa-briefcase about__info-icon"></i>
+                <span class="about__info-title">1.5</span>
+                <span class="about__info-name">Years <br />experience</span>
               </div>
             </div>
 
             <div class="about__buttons">
-              <a download="" href="assets\Mathan-resume.pdf" class="button button--flex">
+              <a download="" href="assets/Mathan-resume.pdf" class="button button--flex">
                 Download CV<i class="fas fa-download button__icon"></i>
               </a>
             </div>
@@ -190,84 +194,61 @@
       <section class="skills section" id="skills">
         <h2 class="section__title">Skills</h2>
         <span class="section__subtitle">My technical level</span>
-
-        <div class="skills__container container grid">
-          <div>
-            <!--==================== Skill 1 =================-->
-            <div class="skills__content skills__open">
-              <div class="skills__header">
-                <i class="fas fa-pencil-ruler skills__icon"></i>
-
-                <div>
-                  <h1 class="skills__title">Programming Languages</h1>
-                </div>
-
-                <i class="uil uil-angle-down skills__arrow"></i>
-              </div>
-              
-
-              <div class="skills__list grid">
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">Html</h3>
-                  </div>
-                  
-                </div>
-                
-                  <div class="skills__data">
-                    <div class="skills__titles">
-                      <h3 class="skills__name">Css</h3>
-                    </div>
-                    
-                  </div>
-                  <div class="skills__data">
-                    <div class="skills__titles">
-                      <h3 class="skills__name">JavaScript</h3>
-                    </div>
-                    
-                  </div>
-                  <div class="skills__data">
-                    <div class="skills__titles">
-                      <h3 class="skills__name">BootsTrap</h3>
-                    </div>
-                   
-                  </div>
-
-                  <div class="skills__data">
-                    <div class="skills__titles">
-                      <h3 class="skills__name">React Js</h3>
-                    </div>
-                   
-                  </div>
-              </div>
+        <div class="skills__container container">
+          <div class="skills__list-all">
+            <div class="skills__badge html-badge">
+              <i class="fa-brands fa-html5 skills__badge-icon"></i>
+              <span class="skills__badge-name">Html</span>
+            </div>
+            
+            <div class="skills__badge css-badge">
+              <i class="fa-brands fa-css3-alt skills__badge-icon"></i>
+              <span class="skills__badge-name">Css</span>
             </div>
 
-            <!--==================== Skill 3 =================-->
-            <div class="skills__content skills__close">
-              <div class="skills__header">
-                <i class="fas fa-swatchbook skills__icon"></i>
-                <div>
-                  <h1 class="skills__title">Technologies</h1>
-                </div>
+            <div class="skills__badge sass-badge">
+              <i class="fa-brands fa-sass skills__badge-icon"></i>
+              <span class="skills__badge-name">Sass</span>
+            </div>
 
-                <i class="uil uil-angle-down skills__arrow"></i>
-              </div>
+            <div class="skills__badge react-badge">
+              <i class="fa-brands fa-react skills__badge-icon"></i>
+              <span class="skills__badge-name">React.js</span>
+            </div>
 
-              <div class="skills__list grid">
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">Git</h3>
-                  </div>
-                  
-                </div>
-                <div class="skills__data">
-                  <div class="skills__titles">
-                    <h3 class="skills__name">GitHub</h3>
-                  </div>
-                  
-                </div>
-                </div>
-              </div>
+            <div class="skills__badge redux-badge">
+              <i class="fa-solid fa-atom skills__badge-icon"></i>
+              <span class="skills__badge-name">Redux</span>
+            </div>
+
+            <div class="skills__badge tailwind-badge">
+              <i class="fa-solid fa-wind skills__badge-icon"></i>
+              <span class="skills__badge-name">Tailwind</span>
+            </div>
+
+            <div class="skills__badge js-badge">
+              <i class="fa-brands fa-js skills__badge-icon"></i>
+              <span class="skills__badge-name">JavaScript</span>
+            </div>
+
+            <div class="skills__badge php-badge">
+              <i class="fa-brands fa-php skills__badge-icon"></i>
+              <span class="skills__badge-name">PHP</span>
+            </div>
+
+            <div class="skills__badge laravel-badge">
+              <i class="fa-brands fa-laravel skills__badge-icon"></i>
+              <span class="skills__badge-name">Laravel</span>
+            </div>
+
+            <div class="skills__badge git-badge">
+              <i class="fa-brands fa-git-alt skills__badge-icon"></i>
+              <span class="skills__badge-name">Git</span>
+            </div>
+
+            <div class="skills__badge github-badge">
+              <i class="fa-brands fa-github skills__badge-icon"></i>
+              <span class="skills__badge-name">GitHub</span>
             </div>
           </div>
         </div>
@@ -304,10 +285,10 @@
             >
               <!--====== Qualification 1 ======-->
               <div class="qualification__data">
-                <div>
+                <div class="qualification__card">
                   <h3 class="qualification__title">SSLC</h3>
                   <span class="qualification__subtitle"
-                    >Government <br />High School</span
+                    >Government High School</span
                   >
                   <div class="qualification__calender">
                     <i class="uil uil-calendar-alt"></i>
@@ -319,42 +300,43 @@
                     View More
                     <i class="uil uil-arrow-right button__icon"></i>
                   </span>
-                  <div class="services__modal">
-                    <div class="services__modal-content">
-                      <h4 class="services__modal-title">
-                        Class 10th Summary :
-                      </h4>
-                      <i class="uil uil-times services__modal-close"></i>
-                      <ul class="services__modal-services grid">
-                        <li class="services__modal-service">
-                          <i
-                            class="uil uil-check-circle services__moda-icon"
-                          ></i>
-                          <p>
-                            Subjects studied: Science, Maths, English,
-                            Social Studies.
-                          </p>
-                        </li>
-                        <li class="services__modal-service">
-                          <i
-                            class="uil uil-check-circle services__moda-icon"
-                          ></i>
-                          <p>Scored 66%</p>
-                        </li>
-                        <li class="services__modal-service">
-                          <i
-                            class="uil uil-check-circle services__moda-icon"
-                          ></i>
-                          <p>Came runners up in inter-school</p>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
                 </div>
 
                 <div>
                   <span class="qualification__rounder"></span>
                   <span class="qualification__line"></span>
+                </div>
+
+                <div class="services__modal">
+                  <div class="services__modal-content">
+                    <h4 class="services__modal-title">
+                      Class 10th Summary :
+                    </h4>
+                    <i class="uil uil-times services__modal-close"></i>
+                    <ul class="services__modal-services grid">
+                      <li class="services__modal-service">
+                        <i
+                          class="uil uil-check-circle services__moda-icon"
+                        ></i>
+                        <p>
+                          Subjects studied: Science, Maths, English,
+                          Social Studies.
+                        </p>
+                      </li>
+                      <li class="services__modal-service">
+                        <i
+                          class="uil uil-check-circle services__moda-icon"
+                        ></i>
+                        <p>Scored 66%</p>
+                      </li>
+                      <li class="services__modal-service">
+                        <i
+                          class="uil uil-check-circle services__moda-icon"
+                        ></i>
+                        <p>Came runners up in inter-school</p>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
 
@@ -366,10 +348,11 @@
                   <span class="qualification__rounder"></span>
                   <span class="qualification__line"></span>
                 </div>
-                <div>
+
+                <div class="qualification__card">
                   <h3 class="qualification__title">Class 12th</h3>
                   <span class="qualification__subtitle"
-                    >Government<br/>High School</span
+                    >Government High School</span
                   >
                   <div class="qualification__calender">
                     <i class="uil uil-calendar-alt"></i>
@@ -381,37 +364,38 @@
                     View More
                     <i class="uil uil-arrow-right button__icon"></i>
                   </span>
-                  <div class="services__modal">
-                    <div class="services__modal-content">
-                      <h4 class="services__modal-title">
-                        Class 12th Summary :
-                      </h4>
-                      <i class="uil uil-times services__modal-close"></i>
-                      <ul class="services__modal-services grid">
-                        <li class="services__modal-service">
-                          <i
-                            class="uil uil-check-circle services__moda-icon"
-                          ></i>
-                          <p>
-                            Subjects studied: Physics, Chemistry, Maths,
-                            English.
-                          </p>
-                        </li>
-                        <li class="services__modal-service">
-                          <i
-                            class="uil uil-check-circle services__moda-icon"
-                          ></i>
-                          <p>Scored 72.5%</p>
-                        </li>
-                      </ul>
-                    </div>
+                </div>
+
+                <div class="services__modal">
+                  <div class="services__modal-content">
+                    <h4 class="services__modal-title">
+                      Class 12th Summary :
+                    </h4>
+                    <i class="uil uil-times services__modal-close"></i>
+                    <ul class="services__modal-services grid">
+                      <li class="services__modal-service">
+                        <i
+                          class="uil uil-check-circle services__moda-icon"
+                        ></i>
+                        <p>
+                          Subjects studied: Physics, Chemistry, Maths,
+                          English.
+                        </p>
+                      </li>
+                      <li class="services__modal-service">
+                        <i
+                          class="uil uil-check-circle services__moda-icon"
+                        ></i>
+                        <p>Scored 72.5%</p>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
 
               <!--====== Qualification 3 ======-->
               <div class="qualification__data">
-                <div>
+                <div class="qualification__card">
                   <h3 class="qualification__title">College</h3>
                   <span class="qualification__subtitle"
                     >Hindustan arts and science college Coimbatore.</span
@@ -426,45 +410,46 @@
                     View More
                     <i class="uil uil-arrow-right button__icon"></i>
                   </span>
-                  <div class="services__modal">
-                    <div class="services__modal-content">
-                      <h4 class="services__modal-title">College Summary :</h4>
-                      <i class="uil uil-times services__modal-close"></i>
-                      <ul class="services__modal-services grid">
-                        <li class="services__modal-service">
-                          <i
-                            class="uil uil-check-circle services__modal-icon"
-                          ></i>
-                          <p>
-                            Studying core subjects of IT including DSA, Embedded
-                            systems, Design analysis and algorithm, Operating
-                            systems, and Computer architecture .
-                          </p>
-                        </li>
-                        <li class="services__modal-service">
-                          <i
-                            class="uil uil-check-circle services__modal-icon"
-                          ></i>
-                          <p>Scored an aggregate of 8.50 CGPA till now.</p>
-                        </li>
-                        <li class="services__modal-service">
-                          <i
-                            class="uil uil-check-circle services__modal-icon"
-                          ></i>
-                          <p>
-                            I implemented a bug tracking system in my internship
-                            to streamline the process of identifying and fixing
-                           software defects.
-                          </p>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
                 </div>
 
                 <div>
                   <span class="qualification__rounder"></span>
                   <!--<span class="qualification__line"></span>-->
+                </div>
+
+                <div class="services__modal">
+                  <div class="services__modal-content">
+                    <h4 class="services__modal-title">College Summary :</h4>
+                    <i class="uil uil-times services__modal-close"></i>
+                    <ul class="services__modal-services grid">
+                      <li class="services__modal-service">
+                        <i
+                          class="uil uil-check-circle services__modal-icon"
+                        ></i>
+                        <p>
+                          Studying core subjects of IT including DSA, Embedded
+                          systems, Design analysis and algorithm, Operating
+                          systems, and Computer architecture .
+                        </p>
+                      </li>
+                      <li class="services__modal-service">
+                        <i
+                          class="uil uil-check-circle services__modal-icon"
+                        ></i>
+                        <p>Scored an aggregate of 8.50 CGPA till now.</p>
+                      </li>
+                      <li class="services__modal-service">
+                        <i
+                          class="uil uil-check-circle services__modal-icon"
+                        ></i>
+                        <p>
+                          I implemented a bug tracking system in my internship
+                          to streamline the process of identifying and fixing
+                         software defects.
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -657,37 +642,43 @@
         <span class="section__subtitle">Get in touch</span>
 
         <div class="contact__container container grid">
-          <div>
-            <div class="contact__information">
-              <i class="uil uil-calling contact__icon"></i>
+          <div class="contact__info-list">
+            <div class="contact__card">
+              <div class="contact__information">
+                <i class="uil uil-calling contact__icon"></i>
 
-              <div>
-                <h3 class="contact__title">Contact Me</h3>
-                <span class="contact__subtitle"
-                  ><a href="tel:6362243314"></a>9944263098</span
-                >
+                <div>
+                  <h3 class="contact__title">Contact Me</h3>
+                  <span class="contact__subtitle">
+                    <a href="tel:9944263098" class="contact__link">9944263098</a>
+                  </span>
+                </div>
               </div>
             </div>
 
-            <div class="contact__information">
-              <i class="uil uil-envelope-minus contact__icon"></i>
+            <div class="contact__card">
+              <div class="contact__information">
+                <i class="uil uil-envelope-minus contact__icon"></i>
 
-              <div>
-                <h3 class="contact__title">Email</h3>
-                <span class="contact__subtitle"
-                  >mathansaran8@gmail.com</span
-                >
+                <div>
+                  <h3 class="contact__title">Email</h3>
+                  <span class="contact__subtitle">
+                    <a href="mailto:mathansaran8@gmail.com" class="contact__link">mathansaran8@gmail.com</a>
+                  </span>
+                </div>
               </div>
             </div>
 
-            <div class="contact__information">
-              <i class="uil uil-map-marker contact__icon"></i>
+            <div class="contact__card">
+              <div class="contact__information">
+                <i class="uil uil-map-marker contact__icon"></i>
 
-              <div>
-                <h3 class="contact__title">Location</h3>
-                <span class="contact__subtitle"
-                  >Coimbatore, Tamil Nadu, India</span
-                >
+                <div>
+                  <h3 class="contact__title">Location</h3>
+                  <span class="contact__subtitle">
+                    <a href="https://maps.google.com/?q=Coimbatore,+Tamil+Nadu,+India" target="_blank" class="contact__link">Coimbatore, Tamil Nadu, India</a>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -695,23 +686,23 @@
           <form action="" class="contact__form grid">
             <div class="contact__inputs grid">
               <div class="contact__content">
-                <label for="" class="content__label">Name</label>
+                <label for="" class="contact__label">Name</label>
                 <input type="text" class="contact__input" />
               </div>
 
               <div class="contact__content">
-                <label for="" class="content__label">Email</label>
+                <label for="" class="contact__label">Email</label>
                 <input type="Email" class="contact__input" />
               </div>
             </div>
 
             <div class="contact__content">
-              <label for="" class="content__label">Message</label>
+              <label for="" class="contact__label">Message</label>
               <textarea
                 name=""
                 id=""
                 cols="0"
-                rows="5"
+                rows="2"
                 class="contact__input"
               ></textarea>
             </div>
@@ -767,7 +758,7 @@
               target="__blank"
               class="footer__social"
             >
-            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-github"></i>
             </a>
           </div>
         </div>
@@ -783,6 +774,10 @@
 
     <script type="text/javascript" src="assets/swiper-bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/2205d59d52.js" crossorigin="anonymous"></script>
+    <!--================== CUSTOM CURSOR ==================-->
+    <div class="custom-cursor-dot"></div>
+    <div class="custom-cursor-outline"></div>
+
     <script src="assets/ptj.js"></script>
   </body>
 </html>
