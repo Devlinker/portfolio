@@ -11,11 +11,16 @@
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
 
-  <body oncontextmenu="return false">
+  <body oncontextmenu="return false;">
     <header class="header" id="header">
       <nav class="nav container">
         <a href="#" class="nav__logo">MATHAN</a>
@@ -109,24 +114,22 @@
                       129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
                      -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
                   />
-<image
-    class="home__blob-img"
-    x="-35"
-    y="-10"
-    width="180"
-    height="210"
-    xlink:href="assets/img/man5.png"
-/>
+                  <image
+                    class="home__blob-img"
+                    x="-35"
+                    y="-10"
+                    width="180"
+                    height="210"
+                    xlink:href="assets/img/man5.png"
+                  />
                 </g>
               </svg>
             </div>
             <div class="home__data">
               <h3 class="home__title">Hey, I'm Mathan</h3>
-              <h2 class="home__subtitle">
-                Front End Developer
-              </h2>
+              <h2 class="home__subtitle">Front End Developer</h2>
               <p class="home__description">
-                <strong> I specialize </strong>  in building responsive websites
+                <strong> I specialize </strong> in building responsive websites
                 with a focus on clean design and seamless interactions.
               </p>
               <a href="#contact" class="button button--flex">
@@ -151,40 +154,79 @@
         <h2 class="section__title">About Me</h2>
         <span class="section__subtitle">My introduction</span>
 
-        <div class="about__container container">
-          <div class="about__data">
-<p class="about__description">
-  I’m a Frontend Developer skilled in HTML, CSS, Bootstrap, and JavaScript.
-  I enjoy building clean, responsive, and user-friendly websites.
-  I’m a quick learner, self-motivated, and love solving problems through coding.
-  I’m always eager to improve my skills and create better web experiences.
-</p>
-
-            <div class="about__info">
-              <div class="about__info-card">
-                <i class="fa-solid fa-graduation-cap about__info-icon"></i>
-                <span class="about__info-title">06.70+</span>
-                <span class="about__info-name">Aggregate <br />CGPA</span>
-              </div>
-
-              <div class="about__info-card">
-                <i class="fa-solid fa-folder-open about__info-icon"></i>
-                <span class="about__info-title">09+</span>
-                <span class="about__info-name">Projects</span>
-              </div>
-
-              <div class="about__info-card">
-                <i class="fa-solid fa-briefcase about__info-icon"></i>
-                <span class="about__info-title">1.5</span>
-                <span class="about__info-name">Years <br />experience</span>
-              </div>
+        <div class="about__bento container">
+          <!-- Main Bio Card -->
+          <div class="about__bento-card about__bento-bio">
+            <div class="about__status">
+              <span class="about__status-dot animate-pulse"></span>
+              <span class="about__status-text">Available for projects</span>
             </div>
-
+            <h3 class="about__bento-title">Who I Am</h3>
+            <p class="about__description">
+              I’m a Frontend Developer skilled in building clean, responsive,
+              and user-friendly websites. I specialize in turning complex
+              designs into smooth, interactive web experiences. Eager to solve
+              problems, learn new tech, and push visual boundaries.
+            </p>
             <div class="about__buttons">
-              <a download="" href="assets/Mathan-resume.pdf" class="button button--flex">
+              <a
+                download=""
+                href="assets/Mathan-resume.pdf"
+                class="button button--flex"
+              >
                 Download CV<i class="fas fa-download button__icon"></i>
               </a>
             </div>
+          </div>
+
+          <!-- Experience Card -->
+          <div class="about__bento-card about__bento-exp">
+            <div class="about__bento-icon">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <div class="about__bento-value">1.5</div>
+            <div class="about__bento-label">Years Experience</div>
+            <div class="about__bento-footer">Building interactive apps</div>
+          </div>
+
+          <!-- Projects Card -->
+          <div class="about__bento-card about__bento-projects">
+            <div class="about__bento-icon">
+              <i class="fa-solid fa-folder-open"></i>
+            </div>
+            <div class="about__bento-value">09+</div>
+            <div class="about__bento-label">Projects Completed</div>
+            <div class="about__bento-footer">Websites & Extensions</div>
+          </div>
+
+          <!-- Education Card -->
+          <div class="about__bento-card about__bento-edu">
+            <div class="about__bento-icon">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="about__bento-value">8.50</div>
+            <div class="about__bento-label">Aggregate CGPA</div>
+            <div class="about__bento-footer">College journeys</div>
+          </div>
+
+          <!-- Location Card -->
+          <div class="about__bento-card about__bento-location">
+            <div class="about__bento-icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="about__bento-value">Coimbatore</div>
+            <div class="about__bento-label">Tamil Nadu, India</div>
+            <div class="about__bento-footer">Ready to work</div>
+          </div>
+
+          <!-- Focus Card -->
+          <div class="about__bento-card about__bento-focus">
+            <div class="about__bento-icon">
+              <i class="fa-solid fa-bullseye"></i>
+            </div>
+            <div class="about__bento-value">React</div>
+            <div class="about__bento-label">Current Focus</div>
+            <div class="about__bento-footer">Modern CSS & JS</div>
           </div>
         </div>
       </section>
@@ -194,61 +236,84 @@
       <section class="skills section" id="skills">
         <h2 class="section__title">Skills</h2>
         <span class="section__subtitle">My technical level</span>
+
         <div class="skills__container container">
-          <div class="skills__list-all">
-            <div class="skills__badge html-badge">
-              <i class="fa-brands fa-html5 skills__badge-icon"></i>
-              <span class="skills__badge-name">Html</span>
-            </div>
-            
-            <div class="skills__badge css-badge">
-              <i class="fa-brands fa-css3-alt skills__badge-icon"></i>
-              <span class="skills__badge-name">Css</span>
+          <div class="skills__pills">
+            <!-- HTML5 -->
+            <div class="skills__pill html-pill" data-category="frontend">
+              <i class="fa-brands fa-html5 skills__pill-icon"></i>
+              <span class="skills__pill-name">HTML5</span>
+              <span class="skills__pill-pct">90%</span>
             </div>
 
-            <div class="skills__badge sass-badge">
-              <i class="fa-brands fa-sass skills__badge-icon"></i>
-              <span class="skills__badge-name">Sass</span>
+            <!-- CSS3 -->
+            <div class="skills__pill css-pill" data-category="frontend">
+              <i class="fa-brands fa-css3-alt skills__pill-icon"></i>
+              <span class="skills__pill-name">CSS3</span>
+              <span class="skills__pill-pct">85%</span>
             </div>
 
-            <div class="skills__badge react-badge">
-              <i class="fa-brands fa-react skills__badge-icon"></i>
-              <span class="skills__badge-name">React.js</span>
+            <!-- Sass -->
+            <div class="skills__pill sass-pill" data-category="frontend">
+              <i class="fa-brands fa-sass skills__pill-icon"></i>
+              <span class="skills__pill-name">Sass</span>
+              <span class="skills__pill-pct">75%</span>
             </div>
 
-            <div class="skills__badge redux-badge">
-              <i class="fa-solid fa-atom skills__badge-icon"></i>
-              <span class="skills__badge-name">Redux</span>
+            <!-- Tailwind CSS -->
+            <div class="skills__pill tailwind-pill" data-category="frontend">
+              <i class="fa-solid fa-wind skills__pill-icon"></i>
+              <span class="skills__pill-name">Tailwind</span>
+              <span class="skills__pill-pct">80%</span>
             </div>
 
-            <div class="skills__badge tailwind-badge">
-              <i class="fa-solid fa-wind skills__badge-icon"></i>
-              <span class="skills__badge-name">Tailwind</span>
+            <!-- JavaScript -->
+            <div class="skills__pill js-pill" data-category="frontend">
+              <i class="fa-brands fa-js skills__pill-icon"></i>
+              <span class="skills__pill-name">JavaScript</span>
+              <span class="skills__pill-pct">85%</span>
             </div>
 
-            <div class="skills__badge js-badge">
-              <i class="fa-brands fa-js skills__badge-icon"></i>
-              <span class="skills__badge-name">JavaScript</span>
+            <!-- React.js -->
+            <div class="skills__pill react-pill" data-category="frontend">
+              <i class="fa-brands fa-react skills__pill-icon"></i>
+              <span class="skills__pill-name">React.js</span>
+              <span class="skills__pill-pct">80%</span>
             </div>
 
-            <div class="skills__badge php-badge">
-              <i class="fa-brands fa-php skills__badge-icon"></i>
-              <span class="skills__badge-name">PHP</span>
+            <!-- Redux -->
+            <div class="skills__pill redux-pill" data-category="frontend">
+              <i class="fa-solid fa-atom skills__pill-icon"></i>
+              <span class="skills__pill-name">Redux</span>
+              <span class="skills__pill-pct">70%</span>
             </div>
 
-            <div class="skills__badge laravel-badge">
-              <i class="fa-brands fa-laravel skills__badge-icon"></i>
-              <span class="skills__badge-name">Laravel</span>
+            <!-- PHP -->
+            <div class="skills__pill php-pill" data-category="backend">
+              <i class="fa-brands fa-php skills__pill-icon"></i>
+              <span class="skills__pill-name">PHP</span>
+              <span class="skills__pill-pct">75%</span>
             </div>
 
-            <div class="skills__badge git-badge">
-              <i class="fa-brands fa-git-alt skills__badge-icon"></i>
-              <span class="skills__badge-name">Git</span>
+            <!-- Laravel -->
+            <div class="skills__pill laravel-pill" data-category="backend">
+              <i class="fa-brands fa-laravel skills__pill-icon"></i>
+              <span class="skills__pill-name">Laravel</span>
+              <span class="skills__pill-pct">75%</span>
             </div>
 
-            <div class="skills__badge github-badge">
-              <i class="fa-brands fa-github skills__badge-icon"></i>
-              <span class="skills__badge-name">GitHub</span>
+            <!-- Git -->
+            <div class="skills__pill git-pill" data-category="backend">
+              <i class="fa-brands fa-git-alt skills__pill-icon"></i>
+              <span class="skills__pill-name">Git</span>
+              <span class="skills__pill-pct">85%</span>
+            </div>
+
+            <!-- GitHub -->
+            <div class="skills__pill github-pill" data-category="backend">
+              <i class="fa-brands fa-github skills__pill-icon"></i>
+              <span class="skills__pill-name">GitHub</span>
+              <span class="skills__pill-pct">85%</span>
             </div>
           </div>
         </div>
@@ -309,30 +374,22 @@
 
                 <div class="services__modal">
                   <div class="services__modal-content">
-                    <h4 class="services__modal-title">
-                      Class 10th Summary :
-                    </h4>
+                    <h4 class="services__modal-title">Class 10th Summary :</h4>
                     <i class="uil uil-times services__modal-close"></i>
                     <ul class="services__modal-services grid">
                       <li class="services__modal-service">
-                        <i
-                          class="uil uil-check-circle services__moda-icon"
-                        ></i>
+                        <i class="uil uil-check-circle services__moda-icon"></i>
                         <p>
-                          Subjects studied: Science, Maths, English,
-                          Social Studies.
+                          Subjects studied: Science, Maths, English, Social
+                          Studies.
                         </p>
                       </li>
                       <li class="services__modal-service">
-                        <i
-                          class="uil uil-check-circle services__moda-icon"
-                        ></i>
+                        <i class="uil uil-check-circle services__moda-icon"></i>
                         <p>Scored 66%</p>
                       </li>
                       <li class="services__modal-service">
-                        <i
-                          class="uil uil-check-circle services__moda-icon"
-                        ></i>
+                        <i class="uil uil-check-circle services__moda-icon"></i>
                         <p>Came runners up in inter-school</p>
                       </li>
                     </ul>
@@ -368,24 +425,17 @@
 
                 <div class="services__modal">
                   <div class="services__modal-content">
-                    <h4 class="services__modal-title">
-                      Class 12th Summary :
-                    </h4>
+                    <h4 class="services__modal-title">Class 12th Summary :</h4>
                     <i class="uil uil-times services__modal-close"></i>
                     <ul class="services__modal-services grid">
                       <li class="services__modal-service">
-                        <i
-                          class="uil uil-check-circle services__moda-icon"
-                        ></i>
+                        <i class="uil uil-check-circle services__moda-icon"></i>
                         <p>
-                          Subjects studied: Physics, Chemistry, Maths,
-                          English.
+                          Subjects studied: Physics, Chemistry, Maths, English.
                         </p>
                       </li>
                       <li class="services__modal-service">
-                        <i
-                          class="uil uil-check-circle services__moda-icon"
-                        ></i>
+                        <i class="uil uil-check-circle services__moda-icon"></i>
                         <p>Scored 72.5%</p>
                       </li>
                     </ul>
@@ -445,7 +495,7 @@
                         <p>
                           I implemented a bug tracking system in my internship
                           to streamline the process of identifying and fixing
-                         software defects.
+                          software defects.
                         </p>
                       </li>
                     </ul>
@@ -464,8 +514,8 @@
 
         <div class="portfolio__container container swiper-container">
           <div class="swiper-wrapper"> -->
-            <!-- ------------------------portfollio 1-------------------- -->
-             <!--
+      <!-- ------------------------portfollio 1-------------------- -->
+      <!--
             <div class="portfolio__content grid swiper-slide">
               <img src="assets/img/portfolio5.png" class="portfolio__img" />
 
@@ -492,8 +542,8 @@
                 </a>
               </div>
             </div> -->
-            <!-- ------------------------portfollio 2-------------------- -->
-             <!--
+      <!-- ------------------------portfollio 2-------------------- -->
+      <!--
             <div class="portfolio__content grid swiper-slide">
               <img src="assets/img/portfolio1.png" class="portfolio__img" />
 
@@ -526,8 +576,8 @@
               </div>
             </div>  -->
 
-            <!-- ------------------------portfollio 3-------------------- -->
-             <!--
+      <!-- ------------------------portfollio 3-------------------- -->
+      <!--
             <div class="portfolio__content grid swiper-slide">
               <img src="assets/img/portfolio2.png" class="portfolio__img" />
 
@@ -557,8 +607,8 @@
               </div>
             </div>  -->
 
-            <!-- ------------------------portfollio 4-------------------- -->
-              <!-- 
+      <!-- ------------------------portfollio 4-------------------- -->
+      <!-- 
             <div class="portfolio__content grid swiper-slide">
               <img src="assets/img/portfolio3.png" class="portfolio__img" />
 
@@ -588,8 +638,8 @@
               </div>
             </div>  -->
 
-            <!-- ------------------------portfollio 5-------------------- -->
-             <!-- 
+      <!-- ------------------------portfollio 5-------------------- -->
+      <!-- 
             <div class="portfolio__content grid swiper-slide">
               <img src="assets/img/portfolio4.png" class="portfolio__img" />
 
@@ -621,8 +671,8 @@
             </div>
           </div>  -->
 
-          <!-- add arrows -->
-           <!--
+      <!-- add arrows -->
+      <!--
           <div class="swiper-button-next">
             <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
           </div>
@@ -630,8 +680,8 @@
             <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
           </div>  -->
 
-          <!-- add pagination -->
-           <!--
+      <!-- add pagination -->
+      <!--
           <div class="swiper-pagination"></div>
         </div>
       </section> -->
@@ -650,7 +700,9 @@
                 <div>
                   <h3 class="contact__title">Contact Me</h3>
                   <span class="contact__subtitle">
-                    <a href="tel:9944263098" class="contact__link">9944263098</a>
+                    <a href="tel:9944263098" class="contact__link"
+                      >9944263098</a
+                    >
                   </span>
                 </div>
               </div>
@@ -663,7 +715,11 @@
                 <div>
                   <h3 class="contact__title">Email</h3>
                   <span class="contact__subtitle">
-                    <a href="mailto:mathansaran8@gmail.com" class="contact__link">mathansaran8@gmail.com</a>
+                    <a
+                      href="mailto:mathansaran8@gmail.com"
+                      class="contact__link"
+                      >mathansaran8@gmail.com</a
+                    >
                   </span>
                 </div>
               </div>
@@ -676,7 +732,12 @@
                 <div>
                   <h3 class="contact__title">Location</h3>
                   <span class="contact__subtitle">
-                    <a href="https://maps.google.com/?q=Coimbatore,+Tamil+Nadu,+India" target="_blank" class="contact__link">Coimbatore, Tamil Nadu, India</a>
+                    <a
+                      href="https://maps.google.com/?q=Coimbatore,+Tamil+Nadu,+India"
+                      target="_blank"
+                      class="contact__link"
+                      >Coimbatore, Tamil Nadu, India</a
+                    >
                   </span>
                 </div>
               </div>
@@ -727,9 +788,7 @@
         <div class="footer__container container grid">
           <div>
             <h4 class="footer__title">Mathan</h4>
-            <span class="footer__subtitle"
-              >Frond End Development</span
-            >
+            <span class="footer__subtitle">Frond End Development</span>
           </div>
 
           <ul class="footer__links">
@@ -750,7 +809,7 @@
               class="footer__social"
               target="__blank"
             >
-            <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-instagram"></i>
             </a>
 
             <a
@@ -758,7 +817,7 @@
               target="__blank"
               class="footer__social"
             >
-            <i class="fa-brands fa-github"></i>
+              <i class="fa-brands fa-github"></i>
             </a>
           </div>
         </div>
@@ -773,7 +832,10 @@
     </a>
 
     <script type="text/javascript" src="assets/swiper-bundle.min.js"></script>
-    <script src="https://kit.fontawesome.com/2205d59d52.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/2205d59d52.js"
+      crossorigin="anonymous"
+    ></script>
     <!--================== CUSTOM CURSOR ==================-->
     <div class="custom-cursor-dot"></div>
     <div class="custom-cursor-outline"></div>

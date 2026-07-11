@@ -566,259 +566,360 @@ body.dark-theme .home__social-icon {
 }
 
 /*===================== About ==================*/
-.about__data {
-  max-width: 600px;
+
+.about__bento {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+  max-width: 968px;
   margin: 0 auto;
-  text-align: center;
+}
+
+.about__bento-card {
+  position: relative;
+  background: hsla(var(--hue-color), 60%, 99%, 0.65);
+  border: 1px solid hsla(var(--hue-color), 69%, 61%, 0.15);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+body.dark-theme .about__bento-card {
+  background: hsla(var(--hue-color), 29%, 16%, 0.45);
+  border-color: hsla(var(--hue-color), 69%, 61%, 0.22);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.about__bento-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--first-color);
+  box-shadow: 0 20px 40px hsla(var(--hue-color), 69%, 61%, 0.18);
+}
+
+/* Ambient inner glow blob on hover */
+.about__bento-card::after {
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--first-color-lighter) 0%, transparent 70%);
+  opacity: 0;
+  top: -75px;
+  right: -75px;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body.dark-theme .about__bento-card::after {
+  background: radial-gradient(circle, var(--first-color) 0%, transparent 70%);
+}
+
+.about__bento-card:hover::after {
+  opacity: 0.25;
+}
+
+/* Bio Card Styles */
+.about__bento-bio {
+  text-align: left;
+}
+
+.about__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: hsla(140, 100%, 40%, 0.08);
+  color: #10b981;
+  padding: 0.45rem 0.9rem;
+  border-radius: 2rem;
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: var(--mb-1-5);
+  align-self: flex-start;
+  border: 1px solid rgba(16, 185, 129, 0.15);
+}
+
+.about__status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #10b981;
+}
+
+.about__bento-title {
+  font-size: var(--h1-font-size);
+  margin-bottom: var(--mb-1);
 }
 
 .about__description {
-  text-align: center;
-  margin-bottom: var(--mb-2);
-  line-height: 1.6;
-}
-
-.about__info {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  margin-bottom: var(--mb-2-5);
-}
-
-.about__info-card {
-  background: hsla(var(--hue-color), 60%, 99%, 0.6);
-  border: 1px solid hsla(var(--hue-color), 69%, 61%, 0.15);
-  border-radius: 0.75rem;
-  padding: 1.25rem 0.5rem;
-  text-align: center;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-body.dark-theme .about__info-card {
-  background: hsla(var(--hue-color), 29%, 16%, 0.5);
-  border-color: hsla(var(--hue-color), 69%, 61%, 0.2);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-.about__info-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--first-color);
-  box-shadow: 0 10px 20px hsla(var(--hue-color), 69%, 61%, 0.15);
-  background: hsla(var(--hue-color), 60%, 99%, 0.85);
-}
-
-body.dark-theme .about__info-card:hover {
-  background: hsla(var(--hue-color), 29%, 16%, 0.75);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-.about__info-icon {
-  font-size: 1.5rem;
-  color: var(--first-color);
-  margin-bottom: var(--mb-0-5);
-  transition: transform 0.3s ease;
-}
-
-.about__info-card:hover .about__info-icon {
-  transform: scale(1.15);
-  color: var(--first-color-alt);
-}
-
-.about__info-title {
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-semi-bold);
-  color: var(--title-color);
-  margin-bottom: var(--mb-0-25);
-  display: block;
-}
-
-.about__info-name {
-  font-size: var(--smaller-font-size);
+  margin-bottom: var(--mb-1-5);
+  line-height: 1.7;
   color: var(--text-color);
-  display: block;
+  z-index: 1;
 }
 
 .about__buttons {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  z-index: 1;
+}
+
+/* Metric Bento Card Styles */
+.about__bento-icon {
+  font-size: 1.8rem;
+  color: var(--first-color);
+  margin-bottom: var(--mb-1);
+  transition: transform 0.4s ease;
+}
+
+.about__bento-card:hover .about__bento-icon {
+  transform: scale(1.18) rotate(8deg);
+}
+
+.about__bento-value {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--title-color);
+  line-height: 1.1;
+  margin-bottom: 0.25rem;
+  z-index: 1;
+}
+
+.about__bento-label {
+  font-size: var(--normal-font-size);
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  z-index: 1;
+}
+
+.about__bento-footer {
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+  font-weight: 500;
+  margin-top: auto;
+  z-index: 1;
+}
+
+/* Responsive bento layouts */
+@media screen and (min-width: 576px) {
+  .about__bento {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about__bento-bio {
+    grid-column: span 2;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about__bento {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .about__bento-bio {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
 }
 
 /*===================== SKILLS =========================*/
 
-.skills__container {
-  row-gap: 0;
-}
 
-.skills__header {
+.skills__pills {
   display: flex;
-  align-items: center;
-  margin-bottom: var(--mb-2-5);
-  cursor: pointer;
-}
-
-.skills__list-all {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
-  max-width: 800px;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 1rem 0;
 }
 
-.skills__badge {
+.skills__pill {
   display: inline-flex;
   align-items: center;
-  column-gap: 0.5rem;
-  background: hsla(var(--hue-color), 60%, 99%, 0.6);
-  border: 1px solid hsla(var(--hue-color), 69%, 61%, 0.15);
+  gap: 0.6rem;
+  background: hsla(var(--hue-color), 60%, 99%, 0.65);
+  border: 1px solid hsla(var(--hue-color), 69%, 61%, 0.12);
   border-radius: 2rem;
-  padding: 0.65rem 1.35rem;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0.8rem 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  font-weight: var(--font-medium);
+  font-size: var(--normal-font-size);
 }
 
-body.dark-theme .skills__badge {
-  background: hsla(var(--hue-color), 29%, 16%, 0.5);
-  border-color: hsla(var(--hue-color), 69%, 61%, 0.2);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+body.dark-theme .skills__pill {
+  background: hsla(var(--hue-color), 29%, 16%, 0.45);
+  border-color: hsla(var(--hue-color), 69%, 61%, 0.18);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
-.skills__badge-icon {
+.skills__pill-icon {
   font-size: 1.35rem;
   color: var(--first-color);
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.skills__badge-name {
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-medium);
+.skills__pill-name {
   color: var(--title-color);
+  font-size: var(--normal-font-size);
   transition: color 0.3s ease;
 }
 
-/* Hover styles with brand colors */
-.skills__badge:hover {
-  transform: translateY(-4px);
-  background: #fff;
+.skills__pill-pct {
+  font-size: var(--smaller-font-size);
+  font-weight: 700;
+  color: var(--text-color-light);
+  margin-left: 0.4rem;
+  transition: color 0.3s ease;
 }
 
-body.dark-theme .skills__badge:hover {
-  background: hsla(var(--hue-color), 29%, 22%, 0.85);
+/* Hover General Animation */
+.skills__pill:hover {
+  transform: translateY(-4px) scale(1.04);
 }
 
-/* Brand Custom Hover Styles */
-.html-badge:hover {
+.skills__pill:hover .skills__pill-icon {
+  transform: scale(1.15) rotate(5deg);
+}
+
+/* Hover Custom Brand Overrides */
+/* HTML5 */
+.html-pill:hover {
   border-color: #e34f26;
-  box-shadow: 0 6px 15px rgba(227, 79, 38, 0.25);
-}
-.html-badge:hover .skills__badge-icon {
   color: #e34f26;
-  transform: scale(1.2) rotate(-5deg);
+  box-shadow: 0 8px 20px rgba(227, 79, 38, 0.22);
 }
+.html-pill:hover .skills__pill-icon { color: #e34f26; }
+.html-pill:hover .skills__pill-name { color: #e34f26; }
+.html-pill:hover .skills__pill-pct { color: #e34f26; }
 
-.css-badge:hover {
+/* CSS3 */
+.css-pill:hover {
   border-color: #1572b6;
-  box-shadow: 0 6px 15px rgba(21, 114, 182, 0.25);
-}
-.css-badge:hover .skills__badge-icon {
   color: #1572b6;
-  transform: scale(1.2) rotate(5deg);
+  box-shadow: 0 8px 20px rgba(21, 114, 182, 0.22);
 }
+.css-pill:hover .skills__pill-icon { color: #1572b6; }
+.css-pill:hover .skills__pill-name { color: #1572b6; }
+.css-pill:hover .skills__pill-pct { color: #1572b6; }
 
-.sass-badge:hover {
+/* Sass */
+.sass-pill:hover {
   border-color: #cc6699;
-  box-shadow: 0 6px 15px rgba(204, 102, 153, 0.25);
-}
-.sass-badge:hover .skills__badge-icon {
   color: #cc6699;
-  transform: scale(1.2) rotate(-5deg);
+  box-shadow: 0 8px 20px rgba(204, 102, 153, 0.22);
 }
+.sass-pill:hover .skills__pill-icon { color: #cc6699; }
+.sass-pill:hover .skills__pill-name { color: #cc6699; }
+.sass-pill:hover .skills__pill-pct { color: #cc6699; }
 
-.react-badge:hover {
-  border-color: #61dafb;
-  box-shadow: 0 6px 15px rgba(97, 218, 251, 0.25);
-}
-.react-badge:hover .skills__badge-icon {
-  color: #61dafb;
-  transform: scale(1.2) rotate(15deg);
-}
-
-.redux-badge:hover {
-  border-color: #764abc;
-  box-shadow: 0 6px 15px rgba(118, 74, 188, 0.25);
-}
-.redux-badge:hover .skills__badge-icon {
-  color: #764abc;
-  transform: scale(1.2) rotate(-10deg);
-}
-
-.tailwind-badge:hover {
+/* Tailwind */
+.tailwind-pill:hover {
   border-color: #38bdf8;
-  box-shadow: 0 6px 15px rgba(56, 189, 248, 0.25);
-}
-.tailwind-badge:hover .skills__badge-icon {
   color: #38bdf8;
-  transform: scale(1.2) rotate(5deg);
+  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.22);
 }
+.tailwind-pill:hover .skills__pill-icon { color: #38bdf8; }
+.tailwind-pill:hover .skills__pill-name { color: #38bdf8; }
+.tailwind-pill:hover .skills__pill-pct { color: #38bdf8; }
 
-.js-badge:hover {
-  border-color: #f7df1e;
-  box-shadow: 0 6px 15px rgba(247, 223, 30, 0.25);
+/* JS */
+.js-pill:hover {
+  border-color: #eab308;
+  color: #eab308;
+  box-shadow: 0 8px 20px rgba(234, 179, 8, 0.22);
 }
-.js-badge:hover .skills__badge-icon {
-  color: #f7df1e;
-  transform: scale(1.2) rotate(-5deg);
-}
+.js-pill:hover .skills__pill-icon { color: #eab308; }
+.js-pill:hover .skills__pill-name { color: #eab308; }
+.js-pill:hover .skills__pill-pct { color: #eab308; }
 
-.php-badge:hover {
+/* React */
+.react-pill:hover {
+  border-color: #61dafb;
+  color: #61dafb;
+  box-shadow: 0 8px 20px rgba(97, 218, 251, 0.25);
+}
+.react-pill:hover .skills__pill-icon { color: #61dafb; }
+.react-pill:hover .skills__pill-name { color: #61dafb; }
+.react-pill:hover .skills__pill-pct { color: #61dafb; }
+
+/* Redux */
+.redux-pill:hover {
+  border-color: #764abc;
+  color: #764abc;
+  box-shadow: 0 8px 20px rgba(118, 74, 188, 0.22);
+}
+.redux-pill:hover .skills__pill-icon { color: #764abc; }
+.redux-pill:hover .skills__pill-name { color: #764abc; }
+.redux-pill:hover .skills__pill-pct { color: #764abc; }
+
+/* PHP */
+.php-pill:hover {
   border-color: #777bb4;
-  box-shadow: 0 6px 15px rgba(119, 123, 180, 0.25);
-}
-.php-badge:hover .skills__badge-icon {
   color: #777bb4;
-  transform: scale(1.2) rotate(-5deg);
+  box-shadow: 0 8px 20px rgba(119, 123, 180, 0.22);
 }
+.php-pill:hover .skills__pill-icon { color: #777bb4; }
+.php-pill:hover .skills__pill-name { color: #777bb4; }
+.php-pill:hover .skills__pill-pct { color: #777bb4; }
 
-.laravel-badge:hover {
+/* Laravel */
+.laravel-pill:hover {
   border-color: #ff2d20;
-  box-shadow: 0 6px 15px rgba(255, 45, 32, 0.25);
-}
-.laravel-badge:hover .skills__badge-icon {
   color: #ff2d20;
-  transform: scale(1.2) rotate(5deg);
+  box-shadow: 0 8px 20px rgba(255, 45, 32, 0.22);
 }
+.laravel-pill:hover .skills__pill-icon { color: #ff2d20; }
+.laravel-pill:hover .skills__pill-name { color: #ff2d20; }
+.laravel-pill:hover .skills__pill-pct { color: #ff2d20; }
 
-.git-badge:hover {
+/* Git */
+.git-pill:hover {
   border-color: #f05032;
-  box-shadow: 0 6px 15px rgba(240, 80, 50, 0.25);
-}
-.git-badge:hover .skills__badge-icon {
   color: #f05032;
-  transform: scale(1.2) rotate(-5deg);
+  box-shadow: 0 8px 20px rgba(240, 80, 50, 0.22);
+}
+.git-pill:hover .skills__pill-icon { color: #f05032; }
+.git-pill:hover .skills__pill-name { color: #f05032; }
+.git-pill:hover .skills__pill-pct { color: #f05032; }
+
+/* GitHub */
+.github-pill:hover {
+  border-color: #333;
+  color: #333;
+  box-shadow: 0 8px 20px rgba(51, 51, 51, 0.22);
+}
+body.dark-theme .github-pill:hover {
+  border-color: #fff;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.25);
+}
+.github-pill:hover .skills__pill-icon { color: #333; }
+body.dark-theme .github-pill:hover .skills__pill-icon { color: #fff; }
+.github-pill:hover .skills__pill-name { color: #333; }
+body.dark-theme .github-pill:hover .skills__pill-name { color: #fff; }
+.github-pill:hover .skills__pill-pct { color: #333; }
+body.dark-theme .github-pill:hover .skills__pill-pct { color: #fff; }
+
+/* Transition helper classes */
+.skills__pill-hide {
+  display: none !important;
 }
 
-.github-badge:hover {
-  border-color: #333;
-  box-shadow: 0 6px 15px rgba(51, 51, 51, 0.25);
-}
-body.dark-theme .github-badge:hover {
-  border-color: #fff;
-  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.25);
-}
-.github-badge:hover .skills__badge-icon {
-  color: #333;
-  transform: scale(1.2) rotate(5deg);
-}
-body.dark-theme .github-badge:hover .skills__badge-icon {
-  color: #fff;
+.skills__pill-fade {
+  opacity: 0 !important;
+  transform: scale(0.9) translateY(10px) !important;
 }
 
 /*==================== Qualifications ====================*/
@@ -1739,4 +1840,5 @@ body.dark-theme .footer__social:has(.fa-github):hover {
     background-color: hsla(var(--hue-color), 69%, 61%, 0.08);
     border-color: var(--first-color-alt);
   }
+}
 }

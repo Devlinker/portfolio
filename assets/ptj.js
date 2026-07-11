@@ -175,7 +175,7 @@ if (cursorDot && cursorOutline) {
   // Track hover state for all interactive elements to trigger hover scaling
   const selectInteractiveElements = () => {
     const hoverElements = document.querySelectorAll(
-      "a, button, input, textarea, select, .skills__header, .change-theme, .portfolio__scroll"
+      "a, button, input, textarea, select, .change-theme, .portfolio__scroll, .about__info-card, .skills__card"
     );
     hoverElements.forEach((el) => {
       // Prevent adding duplicate listeners
@@ -197,3 +197,5 @@ if (cursorDot && cursorOutline) {
   const observer = new MutationObserver(selectInteractiveElements);
   observer.observe(document.body, { childList: true, subtree: true });
 }
+
+
