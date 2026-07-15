@@ -1,21 +1,16 @@
-# Personal Portfolio Website
+# React + Vite
 
-This repository contains the source code and files for my personal portfolio website. The website is built using HTML, CSS, and JavaScript.
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-## Description
+Currently, two official plugins are available:
 
-The personal portfolio website showcases my skills, projects, and experiences as a web developer. It serves as an online platform to highlight my work and provide information about my background and expertise.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## Features
+## React Compiler
 
-- Home: Introduces myself and provides a brief overview of my skills and interests.
-- About: Details my professional background, education, and relevant experience.
-- Projects: Showcases the projects I have worked on, including descriptions, screenshots, and links to live demos or repositories.
-- Skills: Lists the programming languages, frameworks, and tools I am proficient in.
-- Contact: Offers various ways to get in touch with me, such as through email, social media, or a contact form.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Technologies Used
+## Expanding the Oxlint configuration
 
-- HTML: Markup language used for structuring the website.
-- CSS: Stylesheet language used for designing and formatting the website.
-- JavaScript: Programming language used for adding interactivity and dynamic features.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.

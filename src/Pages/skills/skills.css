@@ -1,0 +1,191 @@
+/*===================== SKILLS =========================*/
+
+.skills__pills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.skills__pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: hsla(var(--hue-color), 60%, 99%, 0.65);
+  border: 1px solid hsla(var(--hue-color), 69%, 61%, 0.12);
+  border-radius: 2rem;
+  padding: 0.8rem 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  font-weight: var(--font-medium);
+  font-size: var(--normal-font-size);
+}
+
+body.dark-theme .skills__pill {
+  background: hsla(var(--hue-color), 29%, 16%, 0.45);
+  border-color: hsla(var(--hue-color), 69%, 61%, 0.18);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.skills__pill-icon {
+  font-size: 1.35rem;
+  color: var(--first-color);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.skills__pill-name {
+  color: var(--title-color);
+  font-size: var(--normal-font-size);
+  transition: color 0.3s ease;
+}
+
+.skills__pill-pct {
+  font-size: var(--smaller-font-size);
+  font-weight: 700;
+  color: var(--text-color-light);
+  margin-left: 0.4rem;
+  transition: color 0.3s ease;
+}
+
+/* Hover General Animation */
+.skills__pill:hover {
+  transform: translateY(-4px) scale(1.04);
+}
+
+.skills__pill:hover .skills__pill-icon {
+  transform: scale(1.15) rotate(5deg);
+}
+
+/* Hover Custom Brand Overrides */
+/* HTML5 */
+.html-pill:hover {
+  border-color: #e34f26;
+  color: #e34f26;
+  box-shadow: 0 8px 20px rgba(227, 79, 38, 0.22);
+}
+.html-pill:hover .skills__pill-icon { color: #e34f26; }
+.html-pill:hover .skills__pill-name { color: #e34f26; }
+.html-pill:hover .skills__pill-pct { color: #e34f26; }
+
+/* CSS3 */
+.css-pill:hover {
+  border-color: #1572b6;
+  color: #1572b6;
+  box-shadow: 0 8px 20px rgba(21, 114, 182, 0.22);
+}
+.css-pill:hover .skills__pill-icon { color: #1572b6; }
+.css-pill:hover .skills__pill-name { color: #1572b6; }
+.css-pill:hover .skills__pill-pct { color: #1572b6; }
+
+/* Sass */
+.sass-pill:hover {
+  border-color: #cc6699;
+  color: #cc6699;
+  box-shadow: 0 8px 20px rgba(204, 102, 153, 0.22);
+}
+.sass-pill:hover .skills__pill-icon { color: #cc6699; }
+.sass-pill:hover .skills__pill-name { color: #cc6699; }
+.sass-pill:hover .skills__pill-pct { color: #cc6699; }
+
+/* Tailwind */
+.tailwind-pill:hover {
+  border-color: #38bdf8;
+  color: #38bdf8;
+  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.22);
+}
+.tailwind-pill:hover .skills__pill-icon { color: #38bdf8; }
+.tailwind-pill:hover .skills__pill-name { color: #38bdf8; }
+.tailwind-pill:hover .skills__pill-pct { color: #38bdf8; }
+
+/* JS */
+.js-pill:hover {
+  border-color: #eab308;
+  color: #eab308;
+  box-shadow: 0 8px 20px rgba(234, 179, 8, 0.22);
+}
+.js-pill:hover .skills__pill-icon { color: #eab308; }
+.js-pill:hover .skills__pill-name { color: #eab308; }
+.js-pill:hover .skills__pill-pct { color: #eab308; }
+
+/* React */
+.react-pill:hover {
+  border-color: #61dafb;
+  color: #61dafb;
+  box-shadow: 0 8px 20px rgba(97, 218, 251, 0.25);
+}
+.react-pill:hover .skills__pill-icon { color: #61dafb; }
+.react-pill:hover .skills__pill-name { color: #61dafb; }
+.react-pill:hover .skills__pill-pct { color: #61dafb; }
+
+/* Redux */
+.redux-pill:hover {
+  border-color: #764abc;
+  color: #764abc;
+  box-shadow: 0 8px 20px rgba(118, 74, 188, 0.22);
+}
+.redux-pill:hover .skills__pill-icon { color: #764abc; }
+.redux-pill:hover .skills__pill-name { color: #764abc; }
+.redux-pill:hover .skills__pill-pct { color: #764abc; }
+
+/* PHP */
+.php-pill:hover {
+  border-color: #777bb4;
+  color: #777bb4;
+  box-shadow: 0 8px 20px rgba(119, 123, 180, 0.22);
+}
+.php-pill:hover .skills__pill-icon { color: #777bb4; }
+.php-pill:hover .skills__pill-name { color: #777bb4; }
+.php-pill:hover .skills__pill-pct { color: #777bb4; }
+
+/* Laravel */
+.laravel-pill:hover {
+  border-color: #ff2d20;
+  color: #ff2d20;
+  box-shadow: 0 8px 20px rgba(255, 45, 32, 0.22);
+}
+.laravel-pill:hover .skills__pill-icon { color: #ff2d20; }
+.laravel-pill:hover .skills__pill-name { color: #ff2d20; }
+.laravel-pill:hover .skills__pill-pct { color: #ff2d20; }
+
+/* Git */
+.git-pill:hover {
+  border-color: #f05032;
+  color: #f05032;
+  box-shadow: 0 8px 20px rgba(240, 80, 50, 0.22);
+}
+.git-pill:hover .skills__pill-icon { color: #f05032; }
+.git-pill:hover .skills__pill-name { color: #f05032; }
+.git-pill:hover .skills__pill-pct { color: #f05032; }
+
+/* GitHub */
+.github-pill:hover {
+  border-color: #333;
+  color: #333;
+  box-shadow: 0 8px 20px rgba(51, 51, 51, 0.22);
+}
+body.dark-theme .github-pill:hover {
+  border-color: #fff;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.25);
+}
+.github-pill:hover .skills__pill-icon { color: #333; }
+body.dark-theme .github-pill:hover .skills__pill-icon { color: #fff; }
+.github-pill:hover .skills__pill-name { color: #333; }
+body.dark-theme .github-pill:hover .skills__pill-name { color: #fff; }
+.github-pill:hover .skills__pill-pct { color: #333; }
+body.dark-theme .github-pill:hover .skills__pill-pct { color: #fff; }
+
+/* Transition helper classes */
+.skills__pill-hide {
+  display: none !important;
+}
+
+.skills__pill-fade {
+  opacity: 0 !important;
+  transform: scale(0.9) translateY(10px) !important;
+}
