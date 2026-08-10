@@ -55,12 +55,12 @@ export default function Header({ activeSection }) {
             onClick={() => setShowMenu(false)}
           ></i>
         </div>
-        {/* <div className="nav__btns">
-          <i
+        <div className="nav__btns">
+          {/* <i
             className={`uil change-theme ${theme === "dark" ? "uil-sun" : "uil-moon"}`}
             id="theme-button"
             onClick={toggleTheme}
-          ></i>
+          ></i> */}
           <div
             className="nav__toggle"
             id="nav-toggle"
@@ -68,7 +68,7 @@ export default function Header({ activeSection }) {
           >
             <i className="uil uil-apps"></i>
           </div>
-        </div> */}
+        </div>
       </nav>
     </header>
   );
