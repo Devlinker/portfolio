@@ -37,12 +37,16 @@ body.dark-theme .about__bento-card {
 
 /* Ambient inner glow blob on hover */
 .about__bento-card::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  background: radial-gradient(circle, var(--first-color-lighter) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    var(--first-color-lighter) 0%,
+    transparent 70%
+  );
   opacity: 0;
   top: -75px;
   right: -75px;

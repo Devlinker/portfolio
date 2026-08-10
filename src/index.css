@@ -167,7 +167,11 @@ img {
 /*================== Buttons ===================*/
 .button {
   display: inline-block;
-  background: linear-gradient(135deg, var(--first-color) 0%, var(--first-color-alt) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--first-color) 0%,
+    var(--first-color-alt) 100%
+  );
   color: #fff;
   padding: 1rem 1.75rem;
   margin-bottom: 10px;
@@ -182,7 +186,11 @@ img {
 .button:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 25px hsla(var(--hue-color), 69%, 61%, 0.4);
-  background: linear-gradient(135deg, var(--first-color-alt) 0%, var(--first-color) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--first-color-alt) 0%,
+    var(--first-color) 100%
+  );
 }
 
 .button:active {

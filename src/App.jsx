@@ -7,7 +7,7 @@ import Qualification from "./Pages/qualification/index.jsx";
 import Contact from "./Pages/contact/index.jsx";
 import Footer from "./components/Footer/index.jsx";
 import ScrollUp from "./components/ScrollUp/index.jsx";
-import CustomCursor from "./components/CustomCursor/index.jsx";
+import SplashCursor from "./components/SplashCursor/SplashCursor.jsx";
 
 export default function App() {
   const [activeSection, setActiveSection] = useState("home");
@@ -55,6 +55,7 @@ export default function App() {
 
   return (
     <>
+      <SplashCursor RAINBOW_MODE={false} COLOR="#6c5ce7" />
       <Header activeSection={activeSection} />
       <main className="main">
         <Home />
@@ -65,7 +66,6 @@ export default function App() {
       </main>
       <Footer />
       <ScrollUp />
-      <CustomCursor />
     </>
   );
 }

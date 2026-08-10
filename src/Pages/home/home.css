@@ -155,7 +155,7 @@ body.dark-theme .home__social-icon {
 }
 
 .home__subtitle::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 50%;
@@ -217,7 +217,8 @@ body.dark-theme .home__social-icon {
 }
 
 @keyframes float-mouse {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -226,7 +227,8 @@ body.dark-theme .home__social-icon {
 }
 
 @keyframes bounce-arrow {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
