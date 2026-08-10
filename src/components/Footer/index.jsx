@@ -43,7 +43,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <p className="footer__copy">&#169; Mathan. All right reserved</p>
+        <p className="footer__copy">&#169; 2026 Mathan All right reserved</p>
       </div>
     </footer>
   );
