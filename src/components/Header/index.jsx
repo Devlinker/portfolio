@@ -1,24 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./header.css";
 
 export default function Header({ activeSection }) {
   const [showMenu, setShowMenu] = useState(false);
-  const [theme, setTheme] = useState(() => {
-    return localStorage.getItem("selected-theme") || "light";
-  });
-
-  useEffect(() => {
-    if (theme === "dark") {
-      document.body.classList.add("dark-theme");
-    } else {
-      document.body.classList.remove("dark-theme");
-    }
-    localStorage.setItem("selected-theme", theme);
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
-  };
 
   const navItems = [
     { id: "home", icon: "uil-estate", label: "Home" },
@@ -56,11 +40,6 @@ export default function Header({ activeSection }) {
           ></i>
         </div>
         <div className="nav__btns">
-          {/* <i
-            className={`uil change-theme ${theme === "dark" ? "uil-sun" : "uil-moon"}`}
-            id="theme-button"
-            onClick={toggleTheme}
-          ></i> */}
           <div
             className="nav__toggle"
             id="nav-toggle"

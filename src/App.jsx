@@ -13,6 +13,8 @@ export default function App() {
   const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
+    document.body.classList.add("dark-theme");
+
     // 1. Scroll Header Background Shadow
     const handleHeaderScroll = () => {
       const header = document.getElementById("header");
