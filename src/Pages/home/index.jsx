@@ -1,3 +1,4 @@
+import TrueFocus from "../../components/TrueFocus/TrueFocus.jsx";
 import "./home.css";
 
 export default function Home() {
@@ -65,7 +66,17 @@ export default function Home() {
           </div>
           
           <div className="home__data">
-            <h3 className="home__title">Hey, I'm Mathan</h3>
+            <h3 className="home__title">
+              <TrueFocus
+                sentence="Hey, I'm Mathan"
+                manualMode={false}
+                blurAmount={5}
+                borderColor="var(--first-color)"
+                glowColor="hsla(var(--hue-color), 69%, 61%, 0.45)"
+                animationDuration={0.5}
+                pauseBetweenAnimations={1}
+              />
+            </h3>
             <h2 className="home__subtitle">Front End Developer</h2>
             <p className="home__description">
               <strong> I specialize </strong> in building responsive websites

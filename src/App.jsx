@@ -3,6 +3,7 @@ import Header from "./components/Header/index.jsx";
 import Home from "./Pages/home/index.jsx";
 import About from "./Pages/about/index.jsx";
 import Skills from "./Pages/skills/index.jsx";
+import Projects from "./Pages/projects/index.jsx";
 import Qualification from "./Pages/qualification/index.jsx";
 import Contact from "./Pages/contact/index.jsx";
 import Footer from "./components/Footer/index.jsx";
@@ -63,6 +64,7 @@ export default function App() {
         <Home />
         <About />
         <Skills />
+        <Projects />
         <Qualification />
         <Contact />
       </main>
